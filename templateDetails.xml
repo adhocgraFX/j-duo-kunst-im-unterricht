@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+
+<extension version="3.3" type="template" client="site" method="upgrade">
+	
+	<name>J-Duo</name>
+	<creationDate>2014-01-01</creationDate>
+	<author>Johannes Hock</author>
+	<copyright>Copyright © Johannes Hock adhocgrafx.de</copyright>
+	<authorEmail>info@www.adhocgrafx.de</authorEmail>
+	<authorUrl>http://www.www.adhocgrafx.de</authorUrl>
+	<version>1.0.0</version>
+	<description>
+        <![CDATA[
+		<h1>JDuo, rwd Joomla! 3.3 template</h1>
+		<p><img src="../templates/j-duo/template_preview.png" /></p>
+		<h2>Modulepositions</h2>
+		<ul>
+			<li>nav</li>
+			<li>breadcrumbs</li>
+			<li>slideshow</li>
+			<li>top_row</li>
+			<li>sidebar</li>
+			<li>bottom_row</li>
+			<li>footer</li>
+			<li>debug</li>
+		</ul>
+		<p>Created by <a href="http://www.adhocgrafx.de" target="_blank">Johannes Hock | adhocgrafx.de</a>.</p>
+	    ]]>
+    </description>
+	
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>languages</folder>
+        <folder>fonts</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+	
+	<positions>
+		<position>nav</position>
+        <position>search</position>
+		<position>slideshow</position>
+		<position>breadcrumbs</position>
+		<position>sidebar</position>
+		<position>top_row</position>
+		<position>bottom_row</position>
+		<position>footer</position>
+		<position>debug</position>
+	</positions>
+	
+	<languages folder="languages">
+		<language tag="de-DE">de-DE.tpl_jduo.ini</language>
+        <language tag="en-EN">en-EN.tpl_jduo.ini</language>
+	</languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="options">
+                <field name="Logo Image"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="logo"
+                       type="media"
+                       label="Logo"
+                       description="Select logo image" >
+                </field>
+                <field name="logotitle"
+                       type="text"
+                       default="Site Title"
+                       label="Logo Alt Title"
+                       description="Logo alt title"
+                       filter="string" >
+                </field>
+
+                <field name="Typography"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="basefontsize"
+                       type="text"
+                       filter="integer"
+                       size="3"
+                       default="100"
+                       label="Html base font size"
+                       description="Html base font size in %" >
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="Text indent Paragraph"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="textindent"
+                       type="radio"
+                       default="1"
+                       label="Text indent Paragraph"
+                       description="Text indent Paragraph">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="Google Analytics"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="analytics"
+                       type="text"
+                       default="UA-XXXXX-X"
+                       label="Google Analytics"
+                       description="Google analytics code; anonym, asynchon"
+                       size="10" >
+                </field>
+
+                <field name="Textresizer"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="textresizer"
+                       type="radio"
+                       default="1"
+                       label="Textresizer"
+                       description="Textresizer">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

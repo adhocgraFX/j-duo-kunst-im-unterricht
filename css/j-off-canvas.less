@@ -1,0 +1,232 @@
+// vertical off-canvas sidebars:
+// aside and nav that slides from the left or right
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	height: auto;
+	// z-index: 1000;
+}
+
+// krumme Zahl: 20 * 16px = 320px: 20em - 3em für buttons = 17em
+// nav switches between vertical and horizontal menu
+
+nav {
+	left: -17em;
+	width: 17em;
+
+	&.sidebar-open {
+		left: -17em;
+	}
+}
+
+aside {
+	right: -17em;
+	width: 17em;
+
+	&.sidebar-open {
+		right: -17em;
+	}
+}
+
+// Push classes applied to the body
+.sidebar-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+// für links
+.sidebar-push-toright {
+	left: 17em;
+}
+
+// für rechts
+.sidebar-push-toleft {
+	left: -17em;
+}
+
+// Transitions
+.sidebar,
+.sidebar-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.wrapper-push, .wrapper {
+	margin: 0 auto;
+	width: 100%;
+	padding: 0;
+}
+
+// buttons
+#showLeftPush {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#showRightPush {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#showLeftPush, #showRightPush {
+	border: none;
+	.border-radius(0); // override buttons rounded corners
+	background-color: slategray;
+	color: white;
+	padding: .1em;
+	display: block;
+	width: 3em;
+	height: 3em;
+	cursor: pointer;
+	margin: 0;
+	font-size: 1em;
+
+	&:hover {
+		background-color: lightslategray;
+	}
+
+	&.active, &:active {
+		background-color: darkslategray;
+		color: cornsilk;
+	}
+
+	&.disabled {
+		background-color: gray;
+		pointer-events: none;
+	}
+}
+
+//icons
+#showLeftPush, #showRightPush, #showRightPush.active {
+
+	&:before {
+		display: inline-block;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.5em;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+#showLeftPush {
+
+	&:before {
+		content: "\f0c9";
+	}
+}
+
+#showRightPush {
+
+	&:before {
+		content: "\f053";
+	}
+
+	&.active:before {
+		content: "\f054";
+	}
+}
+
+// fallback / via modernizr
+.no-js > {
+
+	#showLeftPush, #showRightPush {
+		.visuallyhidden
+	}
+
+	nav, aside {
+		float: left;
+		width: 100%;
+		position: relative;
+		left: inherit;
+		right: inherit;
+	}
+
+	@media screen and (min-width: 48em) {
+		aside {
+			width: 38.2%; // goldener schnitt
+		}
+	}
+}
+
+// media queries
+@media screen and (min-width: 30em) {
+
+	nav {
+		left: -27em;
+		width: 27em;
+
+		&.sidebar-open {
+			left: -27em;
+		}
+	}
+
+	aside {
+		right: -27em;
+		width: 27em;
+
+		&.sidebar-open {
+			right: -27em;
+		}
+	}
+
+	// für links
+	.sidebar-push-toright {
+		left: 27em;
+	}
+
+	// für rechts
+	.sidebar-push-toleft {
+		left: -27em;
+	}
+}
+
+@media screen and (min-width: 48em) {
+
+	.sidebar {
+		position: relative;
+	}
+
+	nav {
+		left: 0;
+		width: 100%;
+	}
+
+	aside {
+		right: 0;
+		width: 38.2%; // goldener schnitt
+	}
+
+	.main {
+		width: 61.8%; // goldener schnitt
+	}
+
+	// buttons
+	#showLeftPush, #showRightPush {
+		.visuallyhidden
+	}
+}
+
+@media screen and (min-width: 80em) {
+
+    nav {
+        width: 19.1%; // goldener schnitt, fibonacci reihe: 2
+    }
+
+    aside {
+        width: 30.9%; // goldener schnitt, fibonacci reihe: 3
+    }
+
+    .main {
+        width: 50%; // goldener schnitt, fibonacci reihe: 5  8  13  21  34 ...
+    }
+}

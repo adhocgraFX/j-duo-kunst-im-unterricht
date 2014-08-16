@@ -1,0 +1,336 @@
+// Module Chrome Styles
+// ==================================================
+// Module chrome joomskeleton
+.module {
+	background: @white;
+    display: block;
+	font-size: 1em;
+
+	a:hover, a:active {
+		text-decoration: underline !important;
+		background: transparent !important;
+	}
+
+	.module-body {
+		padding: 1em;
+		display: block;
+		overflow: hidden;
+		height: auto;
+		color: @gray-dark;
+        border-left: 1px solid @gainsboro;
+        border-right: 1px solid @gainsboro;
+
+        h4 {
+            font-size: 1.25em;
+            font-weight: @medium;
+        }
+
+		div {
+			width: 100%;
+			height: auto;
+			display: block;
+			padding: 0;
+			&.video-container {
+				min-height: 200px;
+			}
+		}
+
+		ul {
+			margin-bottom: 1em;
+			list-style: none outside;
+			margin-left: 0;
+			padding: 0;
+			width: 100%;
+		}
+	}
+
+	.module-title {
+		padding: .5em 1em;
+		margin: 0;
+
+		h4.title {
+			color: @smoke;
+			font-size: 1.25em;
+			line-height: 1.4;
+			font-weight: @light;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
+// search
+.module {
+    &.search {
+
+		.module-body {
+			padding: 0;
+            background: @whitesmoke;
+            border: 0; // reset border
+
+            form {
+				margin: 0;
+
+				input {
+					width: 100%;
+					height: 3em;
+					margin: 0;
+					border: 1px solid @gainsboro; // reset border
+					color: @concrete-dark; // @jugfuldablue-light;
+					background: @whitesmoke; // @jugfuldablue-darker;
+
+					&:focus {
+						color: @concrete-darker; // @jugfuldablue-darker;
+						background: @smoke; // @jugfuldablue-light;
+					}
+				}
+			}
+		}
+	}
+}
+
+// JUG Fulda styles
+.module {
+
+    // search JUG Fulda
+    &.search-jugfulda {
+
+        .module-body {
+            padding: 0;
+            border: 0;
+
+            form {
+                margin: 0;
+
+                input {
+                    width: 100%;
+                    height: 3em;
+                    margin: 0;
+                    // border: 0;
+                    color: @jugfuldablue-dark;
+                    background: @whitesmoke;
+
+                    &:focus {
+                        color: @smoke;
+                        background: @jugfuldablue;
+                    }
+                }
+            }
+        }
+    }
+
+    // JUG Fulda blue
+    &.jugfulda {
+        border-bottom: .5em solid @jugfuldablue;
+
+        .module-title {
+            background: @jugfuldablue-dark;
+        }
+    }
+}
+
+// module-body dark-body für dunkle hintergründe
+.module {
+	&.dark-body {
+		background: @jugfuldablue-darker !important;
+
+		.module-body {
+			color: @smoke !important;
+            border: 0 !important;
+
+            a {
+                color: @smoke !important;
+                background: @jugfuldablue;
+            }
+		}
+	}
+}
+
+// modulfarben
+.module {
+
+    // brand
+    &.brand {
+        border-bottom: .5em solid @brand-color-light;
+
+        .module-title {
+            background: @brand-color;
+
+            h4.title {
+                color: @concrete-darker;
+            }
+        }
+    }
+
+    &.dark-brand {
+        border-bottom: .5em solid @brand-color-light;
+
+        .module-title {
+            background: @brand-color;
+        }
+    }
+
+	// Grautöne
+	&.white {
+		border-bottom: .5em solid @gainsboro-light;
+
+		.module-title {
+			background: @gainsboro;
+
+			h4.title {
+				color: @concrete-darker;
+			}
+		}
+	}
+
+	&.clouds {
+		border-bottom: .5em solid @clouds;
+
+		.module-title {
+			background: @clouds-dark;
+
+			h4.title {
+				color: @concrete-darker;
+			}
+		}
+	}
+
+	&.concrete {
+		border-bottom: .5em solid @concrete;
+
+		.module-title {
+			background: @concrete-dark;
+		}
+	}
+
+	// bunte modulfarben für infos - blau, rot, grün, gelb
+	&.midnightblue {
+		border-bottom: .5em solid @midnightblue;
+
+		.module-title {
+			background: @midnightblue-dark;
+		}
+	}
+
+	&.turquoise {
+		border-bottom: .5em solid @turquoise;
+
+		.module-title {
+			background: @turquoise-dark;
+		}
+	}
+
+	&.blue, &.logo-image {
+		border-bottom: .5em solid @blue;
+
+		.module-title {
+			background: @blue-dark;
+		}
+	}
+
+	&.red, &.alert {
+		border-bottom: .5em solid @red;
+
+		.module-title {
+			background: @red-dark;
+		}
+	}
+
+	&.green, &.success {
+		border-bottom: .5em solid @green;
+
+		.module-title {
+			background: @green-dark;
+		}
+	}
+
+	&.yellow, &.question {
+		border-bottom: .5em solid @yellow;
+
+		.module-title {
+			background: @yellow-dark;
+		}
+	}
+
+	&.orange {
+		border-bottom: .5em solid @orange;
+
+		.module-title {
+			background: @orange-dark;
+		}
+	}
+}
+
+// module chrome transparent
+.module {
+	&.transparent {
+		background: transparent;
+		color: inherit !important;
+
+        .module-body {
+            border: 0 !important;
+        }
+
+		.module-title {
+			background: transparent;
+
+			h4.title {
+				color: inherit !important;
+			}
+		}
+	}
+}
+
+// module chrome for menu style
+.menu-style {
+
+	.module-body {
+		padding: 0 !important;
+
+		ul {
+			margin: 0 !important;
+            backgound: @white;
+
+			li {
+				margin: 0 !important;
+
+				&.active {
+					// background: @clouds !important;
+				}
+
+				a {
+					color: @concrete-dark;
+					display: block;
+					padding: .5em 1em;
+					border-bottom: 1px solid @gainsboro-light;
+
+					&:hover {
+						color: @whitesmoke;
+						background: @brand-color-lighter !important;
+						text-decoration: none !important;
+					}
+
+					&:focus, &:active {
+						color: @smoke;
+						background: @brand-color !important;
+					}
+				}
+
+				ul {
+					margin-bottom: 0 !important;
+					margin-top: 0 !important;
+					list-style: disc outside !important;
+
+					li {
+						margin-left: 2em !important;
+						a {
+							border-bottom: 1px solid @gainsboro;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
