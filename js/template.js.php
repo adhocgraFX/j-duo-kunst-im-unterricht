@@ -12,7 +12,8 @@ $ExpStr = "Expires: " . gmdate("D, d M Y H:i:s",time() + $offset) . " GMT";
 header($ExpStr);
 
 // load scripts
-require('classie.min.js');
+require('classie.js');
+require('mlpushmenu.js');
 require('responsiveslides.min.js');
 require('jquery.cookie.min.js');
 require('jquery.textresizer.min.js');

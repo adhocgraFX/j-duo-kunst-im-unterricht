@@ -60,6 +60,11 @@ $textindent = $this->params->get('textindent');
         }
     }
 
+    // mlPushMenu
+    new mlPushMenu( document.getElementById( 'sidebar-s1' ), document.getElementById( 'showLeftPush' ), {
+        type : 'cover'
+    } );
+
     // responsive slideshow von viljamis
     <?php if ($this->countModules('slideshow')): ?>
     jQuery(window).load(function() {
