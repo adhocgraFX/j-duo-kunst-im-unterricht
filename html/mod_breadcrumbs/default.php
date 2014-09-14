@@ -59,7 +59,7 @@ JHtml::_('bootstrap.tooltip');
 
 		if (($key != $penult_item_key) || $show_last)
 		{
-			echo '<span class="divider icon-caret-right"></span>';
+			echo '<span class="divider icon-angle-right"></span>';
 		}
 
 		echo '</li>';

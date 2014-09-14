@@ -24,15 +24,6 @@ nav {
 
 			&.deeper, &.parent {
 
-                a:after {
-                    font-family: FontAwesome;
-                    position: absolute;
-                    content: "\f054";
-                    right: 1em;
-                    font-size: 1em;
-                    //color: @smoke;
-                }
-
 			}
 
 			a {
@@ -59,10 +50,6 @@ nav {
 		padding: 0;
 		margin: 0;
 		list-style-type: none;
-
-        li a:after {
-            content: "" !important;
-        }
 	}
 }
 
@@ -126,6 +113,27 @@ ul.nav {
 }
 
 // media queries // 48 x 16 = 768
+@media screen and (max-width: 48em) {
+
+    nav {
+
+        ul.nav-child {
+
+            li a:before {
+                display: inline-block;
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1em;
+                margin: 0 .5em;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                content: "\f105";
+            }
+        }
+    }
+}
+
 
 @media screen and (min-width: 48em) {
 
@@ -183,10 +191,6 @@ ul.nav {
 
 				&.deeper, &.parent {
 
-                    a:after {
-                        content: "";
-                    }
-
 				}
 
 				a {
@@ -239,10 +243,6 @@ ul.nav {
 
         &.deeper.parent {
             height: 3em;
-
-            a:after {
-                content: "";
-            }
         }
 
         a {

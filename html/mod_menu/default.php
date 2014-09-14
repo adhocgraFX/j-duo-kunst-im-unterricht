@@ -88,13 +88,13 @@ foreach ($list as $i => &$item)
 	// The next item is deeper.
 	if ($item->deeper)
 	{
-		echo '<div class="mp-level"><a class="mp-back" href="#">back</a><ul class="nav-child">';
+		echo '<ul class="nav-child">';
 	}
 	elseif ($item->shallower)
 	{
 		// The next item is shallower.
 		echo '</li>';
-		echo str_repeat('</ul></div></li>', $item->level_diff);
+		echo str_repeat('</ul></li>', $item->level_diff);
 	}
 	else
 	{

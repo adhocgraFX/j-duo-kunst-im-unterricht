@@ -12,14 +12,15 @@ $ExpStr = "Expires: " . gmdate("D, d M Y H:i:s",time() + $offset) . " GMT";
 header($ExpStr);
 
 // load scripts
-require('classie.js');
-require('mlpushmenu.js');
+require('classie.min.js');
 require('responsiveslides.min.js');
 require('jquery.cookie.min.js');
 require('jquery.textresizer.min.js');
 require('jquery.fs.boxer.min.js');
 
+// tap <> hover lösung für drop downs
+require('doubletaptogo.min.js');
+
 // equal heights bottom row
 require('jquery.syncHeight.min.js');
-
 ?>

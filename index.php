@@ -142,11 +142,8 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
                     </a>
                 <?php endif; ?>
             </div>
-            <div id="mp-pusher" class="mp-pusher">
-                <div class="mp-level">
-                    <jdoc:include type="modules" name="nav" />
-                </div>
-            </div>
+
+            <jdoc:include type="modules" name="nav" />
         </nav>
 
         <div class="main" role="main">

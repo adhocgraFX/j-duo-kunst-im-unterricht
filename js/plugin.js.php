@@ -60,10 +60,8 @@ $textindent = $this->params->get('textindent');
         }
     }
 
-    // mlPushMenu
-    new mlPushMenu( document.getElementById( 'sidebar-s1' ), document.getElementById( 'showLeftPush' ), {
-        type : 'cover'
-    } );
+    // double Tap to go by Osvaldas Valutis
+    jQuery( 'nav li:has(ul)' ).doubleTapToGo();
 
     // responsive slideshow von viljamis
     <?php if ($this->countModules('slideshow')): ?>

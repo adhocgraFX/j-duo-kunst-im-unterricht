@@ -73,7 +73,7 @@ JHtml::_('behavior.framework');
 		echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
 	endif; ?>
 
-    <span class="icon-caret-right"></span></a></p>
+    <span class="icon-angle-right"></span></a></p>
 
 <?php endif; ?>
 
