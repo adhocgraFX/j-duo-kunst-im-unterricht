@@ -1,14 +1,21 @@
 // breadcrumbs
 .breadcrumbs-pad {
 	background: @smoke;
-	margin: .5em 0;
-	font-size: .875em;
-	.border-radius(@baseBorderRadius);
-	border: 1px solid @gainsboro;
+    color: @concrete;
+	margin: 0 0 1em 0;
+    padding: .5em 0 0 2em;
+	border-bottom: 1px solid @gainsboro;
+    position: relative;
+    top: -1em;
+    left: -2em;
+    right: -2em;
+    width: 120%;
+    min-height: 3em;
 }
 
 ul.breadcrumb {
 	width: 100%;
+    font-size: .875em;
 	line-height: 1.4;
 	padding: 0;
 	margin: 0;
@@ -22,10 +29,14 @@ ul.breadcrumb {
 		display: block;
 		float: left;
 		padding: 0;
-		margin: 0 .5em 0 0;
+		margin: 0;
 
 		&.active {
 			padding: .5em 0;
+
+            &:last-of-type {
+                margin-left: .5em;
+            }
 
 			span.divider {
 				position: relative;
@@ -48,8 +59,8 @@ ul.breadcrumb {
 			position: relative;
 			display: block;
 			float: left;
-			padding: .5em 1em;
-			color: @concrete-darker;
+			padding: .5em;
+			color: @concrete-dark;
 			background: transparent;
 			// .border-radius(@baseBorderRadius);
 

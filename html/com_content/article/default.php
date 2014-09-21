@@ -34,7 +34,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 ?>
 	<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
 	<div class="page-header">
-		<h2>
+		<h2 id="responsive_headline">
 			<?php if ($this->item->state == 0) : ?>
 				<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
 			<?php endif; ?>
@@ -48,27 +48,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 		</h2>
 	</div>
 	<?php endif; ?>
-	<?php if (!$this->print) : ?>
-		<?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
-		<div class="actions-pad">
-			<ul class="actions">
-				<?php if ($params->get('show_print_icon')) : ?>
-				<li class="print-icon"><?php echo JHtml::_('icon.print_popup', $this->item, $params); ?> </li>
-				<?php endif; ?>
-				<?php if ($params->get('show_email_icon')) : ?>
-				<li class="email-icon"> <?php echo JHtml::_('icon.email', $this->item, $params); ?> </li>
-				<?php endif; ?>
-				<?php if ($canEdit) : ?>
-				<li class="edit-icon"> <?php echo JHtml::_('icon.edit', $this->item, $params); ?> </li>
-				<?php endif; ?>
-			</ul>
-		</div>
-		<?php endif; ?>
-		<?php else : ?>
-		<div class="pull-right">
-		<?php echo JHtml::_('icon.print_screen', $this->item, $params); ?>
-		</div>
-	<?php endif; ?>
+
 <?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author')); ?>
 	<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
@@ -247,7 +227,27 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 			</dl>
 		</div>
 	<?php endif; ?>
-
+        <?php if (!$this->print) : ?>
+            <?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
+                <div class="actions-pad">
+                    <ul class="actions">
+                        <?php if ($params->get('show_print_icon')) : ?>
+                            <li class="print-icon"><?php echo JHtml::_('icon.print_popup', $this->item, $params); ?> </li>
+                        <?php endif; ?>
+                        <?php if ($params->get('show_email_icon')) : ?>
+                            <li class="email-icon"> <?php echo JHtml::_('icon.email', $this->item, $params); ?> </li>
+                        <?php endif; ?>
+                        <?php if ($canEdit) : ?>
+                            <li class="edit-icon"> <?php echo JHtml::_('icon.edit', $this->item, $params); ?> </li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+        <?php else : ?>
+            <div class="pull-right">
+                <?php echo JHtml::_('icon.print_screen', $this->item, $params); ?>
+            </div>
+        <?php endif; ?>
 	<?php
 if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && !$this->item->paginationrelative):
 	echo $this->item->pagination;

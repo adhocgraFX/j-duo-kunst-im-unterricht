@@ -65,23 +65,44 @@
 
 		.module-body {
 			padding: 0;
-            background: @whitesmoke;
-            border: 0; // reset border
+            background: @concrete;
+            height: 3em;
+
+            &:before {
+                color: @smoke !important;
+                display: inline-block;
+                position: absolute;
+                right: 1em;
+                top: .25em;
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1.5em;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                content: "\f002";
+            }
+
 
             form {
 				margin: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 3em;
 
 				input {
-					width: 100%;
+                    width: 100%;
 					height: 3em;
 					margin: 0;
-					border: 1px solid @gainsboro; // reset border
-					color: @concrete-dark; // @jugfuldablue-light;
-					background: @whitesmoke; // @jugfuldablue-darker;
+                    border: 1px solid @concrete; // reset border
+                    color: @smoke;
+                    background: transparent;
 
 					&:focus {
-						color: @concrete-darker; // @jugfuldablue-darker;
-						background: @smoke; // @jugfuldablue-light;
+						color: @concrete-darker;
+						background: @smoke;
 					}
 				}
 			}
@@ -132,15 +153,16 @@
 // module-body dark-body für dunkle hintergründe
 .module {
 	&.dark-body {
-		background: @jugfuldablue-darker !important;
+		background: @brand-color-darker !important;
 
 		.module-body {
 			color: @smoke !important;
             border: 0 !important;
+            text-align: center;
 
             a {
                 color: @smoke !important;
-                background: @jugfuldablue;
+                background: @brand-color-dark;
             }
 		}
 	}
@@ -172,15 +194,21 @@
 
 	// Grautöne
 	&.white {
-		border-bottom: .5em solid @gainsboro-light;
+		border-bottom: .5em solid @brand-color-lighter;
 
 		.module-title {
-			background: @gainsboro;
+			background: @brand-color-lighter;
 
 			h4.title {
-				color: @concrete-darker;
+				color: @smoke;
 			}
 		}
+
+        .module-body {
+            padding: 1em 0;
+            border-left: 0;
+            border-right: 0;
+        }
 	}
 
 	&.clouds {

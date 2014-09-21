@@ -20,7 +20,7 @@ JHtml::_('behavior.caption');
 	</div>
 	<?php endif; ?>
 	<?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
-	<h2 class="subtitle"> <?php echo $this->escape($this->params->get('page_subheading')); ?>
+	<h2 id="responsive_headline" class="subtitle"> <?php echo $this->escape($this->params->get('page_subheading')); ?>
 		<?php if ($this->params->get('show_category_title')) : ?>
 		<span class="subheading-category"><?php echo $this->category->title;?></span>
 		<?php endif; ?>

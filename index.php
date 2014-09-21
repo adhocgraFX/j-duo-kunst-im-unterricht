@@ -126,12 +126,6 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
         </section>
     <?php endif; ?>
 
-    <?php if ($this->countModules('top_row')): ?>
-        <section class="top" role="complementary">
-            <jdoc:include type="modules" name="top_row" style="jduo" />
-        </section>
-    <?php endif; ?>
-
     <section class="wrapper-push">
 
         <nav class="sidebar" id="sidebar-s1" role="navigation">
@@ -147,14 +141,20 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
         </nav>
 
         <div class="main" role="main">
-            <jdoc:include type="message" />
-            <jdoc:include type="component" />
-
             <?php if ($this->countModules('breadcrumbs')): ?>
                 <div class="breadcrumbs-pad" role="navigation">
                     <jdoc:include type="modules" name="breadcrumbs" />
                 </div>
             <?php endif; ?>
+
+            <?php if ($this->countModules('top_row')): ?>
+                <section class="top" role="complementary">
+                    <jdoc:include type="modules" name="top_row" style="jduo" />
+                </section>
+            <?php endif; ?>
+
+            <jdoc:include type="message" />
+            <jdoc:include type="component" />
         </div>
 
         <aside class="sidebar" id="sidebar-s2" role="complementary">

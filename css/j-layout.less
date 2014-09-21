@@ -26,7 +26,7 @@ header {
 
 .logo-image {
 	overflow: hidden;
-	text-align: center;
+	text-align: left;
 	height: 3em;
     z-index: -1;
     border-bottom: 1px solid @gainsboro;
@@ -36,6 +36,7 @@ header {
 		height: 3em;
 		display: block;
 		padding: 0;
+        margin-left: 1em;
 
 		img {
 			height: 100%;
@@ -52,10 +53,10 @@ header {
 
 .textresizer-pad {
 	text-align: center;
-	height: 3.5em;
+	height: 3em;
 	border-left: 1px solid @gainsboro;
     border-right: 1px solid @gainsboro;
-	border-bottom: .5em solid @gainsboro-dark;
+	// border-bottom: .5em solid @gainsboro-dark;
 
 	ul  {
 		margin: 0;
@@ -70,22 +71,28 @@ header {
 			margin: 0;
 
 			a {
-				color: @concrete-dark;
+				color: @concrete;
 				display: block;
 				padding: .75em 1em;
 				height: 3em;
 
 				&:hover {
-					color: @concrete-darker;
-					background: @clouds-dark;
+					color: @smoke;
+					background: @concrete-light;
 					text-decoration: none;
 				}
 
-				&:focus, &:active, &.textresizer-active {
-					color: @whitesmoke;
-					background: @concrete;
+				&.textresizer-active {
+					color: @concrete-darker;
+					// background: @concrete-light;
 				}
-				span {
+
+                &:focus, &:active {
+                    color: @smoke;
+                    background: @concrete-dark;
+                }
+
+                span {
 					font-size: 1.5em;
 				}
 			}
@@ -143,7 +150,7 @@ footer {
 	background: @concrete-darker;
 }
 
-header, section.rslides_container, section.top, section.bottom,
+header, section.rslides_container, /* section.top, */ section.bottom,
 footer, nav, aside, .main {
 	.make-block
 }
@@ -213,14 +220,16 @@ footer, section.top, section.bottom {
 
 	.logo-image {
 		position: absolute;
+        // text-align: left;
 		left: 0;
-		top: -6em;
+		top: 0;
 		width: 9em;
-		height: 6em;
+		height: 4em;
         border-bottom: 0;
 
 		a {
-			height: 6em;
+			height: 4em;
+            margin-left: 2em;
 		}
 	}
 
@@ -233,18 +242,27 @@ footer, section.top, section.bottom {
 @media screen and (min-width: 80em) {
 
     .logo-image {
-        width: 12em;
-    }
+        position: relative;
+        width: 100%;
+        height: 3em;
+        border-bottom: 1px solid @gainsboro;
 
-    .main {
-        padding: 1em 3em !important;
+        a {
+            height: 3em;
+            margin-left: 1em;
+        }
     }
 }
 
 @media screen and (min-width: 100em) {
 
     .main {
-        padding: 1em 4em !important;
+        padding: 1em 3em !important;
+    }
+
+    .breadcrumbs-pad {
+        padding: .5em 0 0 3em;
+        left: -3em;
     }
 }
 

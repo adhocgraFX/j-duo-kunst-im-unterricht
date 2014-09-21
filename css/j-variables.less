@@ -47,9 +47,10 @@
 @clouds:                #F0F5FF;
 @clouds-dark:           #D3D8E0;
 
-@concrete:              #AAAEB5;
-@concrete-dark:         #6E7175;
-@concrete-darker:       #3C3D40;
+@concrete: #9ea8af;
+@concrete-light:        lighten(@concrete, 5%);
+@concrete-dark:         darken(@concrete, 10%);
+@concrete-darker:       darken(@concrete, 20%);
 
 @midnightblue:          #34495E;
 @midnightblue-dark:     #2C3E50;
@@ -103,8 +104,8 @@
 // Font variables, teilw. typeplate inspired  plus eigne Ideen
 
 @line-height:           1.4;
-@line-height-medium:    1.5;
-@line-height-large:     1.6;
+@line-height-medium:    1.45;
+@line-height-large:     1.5;
 
 @line-height-heading:   1.1;
 
@@ -145,9 +146,9 @@
 // body and basic text colors
 
 @body-color: @smoke-dark;
-@body-copy-color: @concrete-darker;
-@heading-color: @concrete-dark;
-@subheading-color: @concrete;
+@body-copy-color: @gray-dark;
+@heading-color: @brand-color; // @concrete-dark;
+@subheading-color: @brand-color-light; // @concrete;
 
 
 // TypeScale Unit

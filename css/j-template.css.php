@@ -28,8 +28,6 @@ $textindent = $this->params->get('textindent');
 
         article p.readmore {
             text-indent: 0 !important;
-            display: block;
-            padding: 1em 0 2em 0;
         }
 
         article p.readmore a {

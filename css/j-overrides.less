@@ -90,6 +90,11 @@ dl.article-info {
 // eigene varablen für Farbfamilien einbauen
 
 //readmore
+article p.readmore {
+    display: block;
+    padding: 0;
+}
+
 p.readmore, a.readmore {
 	text-align: right;
 	display: block;
@@ -162,7 +167,7 @@ div.pager {
 }
 
 ul.pager, .pager ul {
-	margin:.5em 0;
+	margin: .5em 0 1em 0;
 	padding: 0;
 
 	li a {
@@ -170,7 +175,6 @@ ul.pager, .pager ul {
 		background: @gainsboro-light;
 		.border-radius(@baseBorderRadius);
 		padding: .5em 1em !important;
-		margin: 0 .5em;
 		float: none;
 		display: inline-block;
 		font-size: 87.5%;
@@ -190,11 +194,13 @@ ul.pager, .pager ul {
 		}
 
 		li.next {
-			float: left
+			float: left;
+            margin-right: 1em;
 		}
 
 		li.previous {
 			float: right;
+            margin-left: 1em;
 		}
 	}
 }
@@ -215,8 +221,8 @@ p.counter {
 // items general + blog stuff
 
 article {
-    border-bottom: .5em solif @gainsboro;
-    padding: 1em 0;
+    border-bottom: .5em solid @gainsboro;
+    padding: 0;
     margin: 1em 0;
 }
 
@@ -292,6 +298,27 @@ article {
 	}
 }
 
+// category list viev
+
+div.category-list {
+
+    // kleinere Schrift, wg layout
+    table {
+        // font-size: .875em; // su
+    }
+
+    // wegnehmen, nur in k-i-u
+    fieldset.filters {
+        .visuallyhidden
+    }
+}
+
+// table allg
+
+table {
+    font-size: .875em;
+}
+
 // pagebreak
 .article-index {
 	margin: 0 0 1em 1em;
@@ -304,6 +331,12 @@ article {
 		margin: 0;
 		padding: 0;
 	}
+}
+
+// article info
+
+dl.article-info {
+
 }
 
 table.contenttoc {
@@ -479,8 +512,8 @@ ul.actions {
 	margin: .5em 0;
 
 	li {
-		padding: 0;
-		margin: 0;
+        margin: 0;
+        padding: 0;
 
 		a {
 			text-decoration: none;
@@ -490,7 +523,7 @@ ul.actions {
 			float: right;
 			width: auto;
 			font-weight: normal;
-			margin-left: .5em;
+			margin: 0 0 .5em .5em;
 			padding: .5em 1em;
 			color: @concrete-darker;
 			background: @gainsboro-light;
@@ -614,3 +647,48 @@ div.edit.item-page {
     }
 }
 
+// show tags von php roberto überschreiben mit .content-tags
+div.content-tags {
+    margin: .5em 0;
+    padding: 0;
+    font-size: .875em;
+    min-height: 1em;
+    overflow: hidden;
+    display: block;
+
+    ul {
+        list-style-type: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0;
+            padding: 0;
+
+            a {
+                display: inline-block;
+                padding: .25em .5em;
+                margin: 0 .25em .25em 0;
+                float: left;
+                color: @concrete-darker;
+                background: @gainsboro-light;
+                .border-radius(@baseBorderRadius);
+                font-weight: normal;
+                text-decoration: none;
+                cursor: pointer;
+                line-height: 1.4;
+
+                &:hover {
+                    color: @whitesmoke;
+                    background: @concrete;
+                }
+
+                &:focus, &:active {
+                    color: @whitesmoke;
+                    background: @concrete-dark;
+                }
+            }
+        }
+    }
+}

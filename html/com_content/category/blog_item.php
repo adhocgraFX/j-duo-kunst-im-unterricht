@@ -22,7 +22,7 @@ JHtml::_('behavior.framework');
 
 <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
 
-<?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
+
 
 <?php // Todo Not that elegant would be nice to group the params ?>
 <?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
@@ -43,6 +43,8 @@ JHtml::_('behavior.framework');
 <?php if ($useDefList) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
 <?php  endif; ?>
+
+<?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
 
 <?php if ($params->get('show_readmore') && $this->item->readmore) :
 	if ($params->get('access-view')) :

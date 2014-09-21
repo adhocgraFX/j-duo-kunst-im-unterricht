@@ -17,6 +17,8 @@ require('responsiveslides.min.js');
 require('jquery.cookie.min.js');
 require('jquery.textresizer.min.js');
 require('jquery.fs.boxer.min.js');
+// fittext
+require('jquery.fittext.js');
 
 // tap <> hover lösung für drop downs
 require('doubletaptogo.min.js');

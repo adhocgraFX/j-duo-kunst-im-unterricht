@@ -113,7 +113,7 @@ ul.nav {
 }
 
 // media queries // 48 x 16 = 768
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 47.9em) {
 
     nav {
 
@@ -138,10 +138,6 @@ ul.nav {
 @media screen and (min-width: 48em) {
 
     nav {
-
-        a.mp-back {
-            .visuallyhidden
-        }
 
         // menu class suffix
         ul.nav.brand li:hover ul.nav-child {
@@ -174,8 +170,8 @@ ul.nav {
 
 	nav {
 		text-transform: uppercase;
-		text-align: center;
-		height: 4em !important;
+		text-align: right;
+        height: 4em !important;
 
 		ul.nav  {
 			display: inline-block;
@@ -233,6 +229,22 @@ ul.nav {
                     }
                 }
             }
+        }
+
+        ul.nav li:hover:nth-child(2) ul.nav-child {
+            width: 24em;
+
+            li {
+                width: 11.94em;
+                float: left;
+            }
+
+        }
+
+        ul.nav li:hover:last-child ul.nav-child {
+            position: absolute;
+            right: 1em;
+            margin: -1em 0 0 0;
         }
 	}
 }

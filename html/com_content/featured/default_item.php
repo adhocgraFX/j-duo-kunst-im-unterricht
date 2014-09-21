@@ -22,7 +22,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 <?php endif; ?>
 
 <?php if ($params->get('show_title')) : ?>
-	<h2 class="item-title">
+	<h2 id="responsive_headline" class="item-title">
 	<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>"> <?php echo $this->escape($this->item->title); ?></a>
 	<?php else : ?>
@@ -33,22 +33,6 @@ $info    = $this->item->params->get('info_block_position', 0);
 
 <?php if ($this->item->state == 0) : ?>
 	<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
-<?php endif; ?>
-
-<?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
-	<div class="actions-pad">
-		<ul class="actions">
-		<?php if ($params->get('show_print_icon')) : ?>
-			<li class="print-icon"> <?php echo JHtml::_('icon.print_popup', $this->item, $params); ?> </li>
-		<?php endif; ?>
-		<?php if ($params->get('show_email_icon')) : ?>
-			<li class="email-icon"> <?php echo JHtml::_('icon.email', $this->item, $params); ?> </li>
-		<?php endif; ?>
-		<?php if ($canEdit) : ?>
-			<li class="edit-icon"> <?php echo JHtml::_('icon.edit', $this->item, $params); ?> </li>
-		<?php endif; ?>
-		</ul>
-	</div>
 <?php endif; ?>
 
 <?php // Todo Not that elegant would be nice to group the params ?>
@@ -223,6 +207,22 @@ $info    = $this->item->params->get('info_block_position', 0);
 		<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
 	<?php endif; ?>
 
+<?php endif; ?>
+
+<?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
+    <div class="actions-pad">
+        <ul class="actions">
+            <?php if ($params->get('show_print_icon')) : ?>
+                <li class="print-icon"> <?php echo JHtml::_('icon.print_popup', $this->item, $params); ?> </li>
+            <?php endif; ?>
+            <?php if ($params->get('show_email_icon')) : ?>
+                <li class="email-icon"> <?php echo JHtml::_('icon.email', $this->item, $params); ?> </li>
+            <?php endif; ?>
+            <?php if ($canEdit) : ?>
+                <li class="edit-icon"> <?php echo JHtml::_('icon.edit', $this->item, $params); ?> </li>
+            <?php endif; ?>
+        </ul>
+    </div>
 <?php endif; ?>
 
 <?php if ($params->get('show_readmore') && $this->item->readmore) :

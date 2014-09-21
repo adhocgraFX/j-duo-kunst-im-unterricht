@@ -39,10 +39,16 @@ h2, h3, h4, h5, h6 {
     color: @heading-color;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: @brand-heading-font, Helvetica, Arial, 'Droid Sans', sans-serif;
     color: @brand-color;
     font-weight: @light;
+}
+
+h4, h5, h6 {
+    font-family: @heading-font , Helvetica, Arial, 'Droid Sans', sans-serif;
+    color: @brand-color-light;
+    font-weight: @semibold;
 }
 
 h1 {
@@ -96,8 +102,8 @@ h6 {
 article {
 
     h1, h2, h3, h4, h5, h6 {
-		font-weight: @light !important;
-		color: @heading-color !important;
+		// font-weight: @light !important;
+		// color: @heading-color !important;
 	}
 
     h2 {
@@ -128,8 +134,8 @@ article {
 section {
 
     h1, h2, h3, h4, h5, h6 {
-		font-weight: @medium;
-		color: @subheading-color;
+		// font-weight: @medium;
+		// color: @subheading-color;
 	}
 }
 
@@ -567,6 +573,8 @@ article {
 		}
 	}
 
+    // kunst im unterricht overrides
+    /*
 	h3 {
 		font-size: 1.5em;
 
@@ -598,6 +606,7 @@ article {
             font-size: 1em;
         }
 	}
+	*/
 
 	// paragraph styles plus helper classes
 	p {
@@ -637,6 +646,8 @@ article {
 		}
 	}
 
+    // kunst im unterricht overrides
+    /*
 	h3 {
 		font-size: 2.1154em;
 
@@ -668,6 +679,7 @@ article {
             font-size: 1em;
         }
 	}
+	*/
 
 	// paragraph styles plus helper classes
 	p {
