@@ -9,21 +9,33 @@
 nav {
 	z-index: 10000;
     font-weight: 300;
+    border-right: 1px solid @gainsboro-light;
 
 	ul.nav   {
 		margin: 0;
 		padding: 0;
-		list-style-type: none;
+        list-style-type: none;
 
-		li {
+        li {
 			margin: 0;
 
 			&.current, &.active {
 
 			}
 
-			&.deeper, &.parent {
+            &.deeper {
 
+                a:after {
+                    display: inline-block;
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 1em;
+                    margin: 0 .5em;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    content: "\f107";
+                }
 			}
 
 			a {
@@ -47,10 +59,40 @@ nav {
 	}
 
 	ul.nav-child {
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
-	}
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    ul > li:not( .deeper) > a:after {
+        content: "" !important;
+        margin: 0;
+    }
+
+    ul.nav li ul.nav-child {
+        display: none;
+    }
+
+    ul.nav li:hover ul.nav-child {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        li {
+
+            a {
+                background: @clouds;
+
+                &:hover {
+                    background: @concrete;
+                }
+
+                &:focus, &:active {
+                    background: @concrete-darker;
+                }
+            }
+        }
+    }
 }
 
 // menu class suffixes
@@ -58,7 +100,7 @@ ul.nav {
 
     &.brand   {
 
-        li {
+        li, li:hover ul.nav-child li {
 
             &.current, &.active {
 
@@ -112,29 +154,6 @@ ul.nav {
     }
 }
 
-// media queries // 48 x 16 = 768
-@media screen and (max-width: 47.9em) {
-
-    nav {
-
-        ul.nav-child {
-
-            li a:before {
-                display: inline-block;
-                font-family: FontAwesome;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 1em;
-                margin: 0 .5em;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                content: "\f105";
-            }
-        }
-    }
-}
-
-
 @media screen and (min-width: 48em) {
 
     nav {
@@ -172,6 +191,8 @@ ul.nav {
 		text-transform: uppercase;
 		text-align: right;
         height: 4em !important;
+        border-right: 0;
+        border-bottom: 1px solid @gainsboro-light;
 
 		ul.nav  {
 			display: inline-block;
@@ -186,6 +207,11 @@ ul.nav {
                 }
 
 				&.deeper, &.parent {
+
+                    a:after {
+                        content: ""; // eh schon absoluter PLatzmangel
+                        margin: 0;
+                    }
 
 				}
 
@@ -251,10 +277,27 @@ ul.nav {
 
 @media screen and (min-width: 80em) {
 
+    nav ul.nav li:hover:nth-child(2) ul.nav-child {
+        position: absolute;
+        top: 9em;
+        width: 24em;
+        min-height: 4em;
+
+        li {
+            width: 11.94em;
+            float: left;
+        }
+
+    }
+
     nav ul.nav li {
 
-        &.deeper.parent {
+        &.deeper {
             height: 3em;
+
+            a:after {
+                content: "\f105";
+            }
         }
 
         a {
@@ -272,7 +315,7 @@ ul.nav {
         position: relative;
         left: 10em;
         top: 0;
-        margin: -2em 0 0 0;
+        margin: -4em 0 0 0;
         padding: .5em 0;
         z-index: 99999999;
         background: @smoke;

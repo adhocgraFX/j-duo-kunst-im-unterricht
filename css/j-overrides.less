@@ -48,6 +48,14 @@ dl.search-results {
 	}
 }
 
+fieldset {
+
+    &.phrases, &.only {
+        width: 47.5%;
+        float: left;
+    }
+}
+
 // details
 dl.article-info {
 	margin: 1em 0;
@@ -310,6 +318,64 @@ div.category-list {
     // wegnehmen, nur in k-i-u
     fieldset.filters {
         .visuallyhidden
+    }
+}
+
+// categories list // nur in K i u
+
+div.categories-list {
+    margin: 1em 0;
+    padding: 0;
+    border: 1px solid @gainsboro;
+    border-top: 2px solid @gainsboro-dark;
+
+    div {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid @gainsboro;
+
+        &:nth-child(2n+2) {
+            background: @whitesmoke;
+        }
+
+        &.first {
+
+        }
+
+        &.last {
+            border-bottom: 2px solid @gainsboro-dark;
+        }
+
+        h3.page-header.item-title {
+            font-size: @font-size * .875%;
+            font-weight: @book;
+            line-height: @line-height;
+            color: @body-copy-color;
+            font-family: @body-font, Helvetica, Arial, 'Droid Sans', sans-serif;
+            margin: 0 !important;
+
+            a {
+                display: inline-block;
+                padding: .5em 1em;
+
+                &:hover {
+                    background: @gainsboro-light;
+                }
+
+                &:active {
+                    background: @gainsboro;
+                }
+            }
+
+            span.badge {
+                background: @gainsboro;
+                color: @brand-color-darker;
+                text-shadow: 0 0 0 transparent !important;
+                padding: .5em 1em;
+                margin: .25em;
+                float: right;
+            }
+        }
     }
 }
 

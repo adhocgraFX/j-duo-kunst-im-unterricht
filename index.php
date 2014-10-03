@@ -88,22 +88,6 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
     <!-- load css options -->
     <?php include_once ('css/j-template.css.php'); ?>
 
-    <!-- brick fonts
-    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Fira+Sans:300,300i,400,400i,500,500i">
-    -->
-
-    <!-- fontAwesome - alternativ: kleine Auswahl laden, siehe j template less
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    -->
-
-    <!-- google fonts
-    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
-    -->
-
-    <!-- adobe edge web fonts
-    <script src="//use.edgefonts.net/lato:n3,i3,n4,i4,n7,i7.js"></script>
-    -->
-
 </head>
   
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?> sidebar-push">
@@ -136,7 +120,6 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
                     </a>
                 <?php endif; ?>
             </div>
-
             <jdoc:include type="modules" name="nav" />
         </nav>
 

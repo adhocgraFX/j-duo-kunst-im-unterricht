@@ -22,10 +22,8 @@ $textindent = $this->params->get('textindent');
         article p.bild + p,
         article p.lead + p,
         article p.bildlegende + p,
-        article p.autor + p {
-            text-indent: 0 !important;
-        }
-
+        article p.autor + p,
+        article table p + p,
         article p.readmore {
             text-indent: 0 !important;
         }
