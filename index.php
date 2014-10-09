@@ -57,7 +57,7 @@ $doc->addScript($tpath.'/js/modernizr-2.8.2.min.js');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- typekit fonts -->
-    <script type="text/javascript" src="//use.typekit.net/gbu8wbh.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/xyz.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <!-- Bildverkleinerung über mobify cdn -->
