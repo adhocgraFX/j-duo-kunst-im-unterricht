@@ -19,7 +19,7 @@ header {
 			font-size: 1.25em;
 			color: @brand-color;
 			padding: 0;
-			margin: .65em 0;
+			margin: .65em 2.5em;
 		}
 	}
 }
@@ -32,7 +32,7 @@ header {
     border-bottom: 1px solid @gainsboro-light;
 
 	a {
-		width: 100%;
+		width: 90%;
 		height: 3em;
 		display: block;
 		padding: 0;
@@ -150,6 +150,20 @@ footer {
 	background: @concrete-darker;
 }
 
+body#print {
+
+    header {
+        background: transparent;
+    }
+
+    footer.print-footer {
+        background: transparent;
+        color: gray;
+        padding: 1em;
+        text-align: center;
+    }
+}
+
 header, section.rslides_container, /* section.top, */ section.bottom,
 footer, nav, aside, .main {
 	.make-block
@@ -179,7 +193,7 @@ footer, section.top, section.bottom {
 
             h1 {
                 font-size: 1.5em;
-                margin: .5em 0;
+                margin: .5em 2em;
             }
         }
     }
@@ -188,7 +202,7 @@ footer, section.top, section.bottom {
 // 48 x 16 = 768
 @media screen and (min-width: 48em) {
 
-	.wrapper-push {
+    .wrapper-push {
 		// .order(5);
 	}
 
@@ -204,6 +218,7 @@ footer, section.top, section.bottom {
 
 			h1 {
 				font-size: 3em;
+                margin: .45em 0;
 			}
 		}
 	}

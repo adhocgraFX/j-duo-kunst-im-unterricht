@@ -24,13 +24,6 @@ body {
 	line-height: 1.3;
 }
 
-footer.print-footer {
-    background: transparent;
-    color: black;
-    padding: 1em;
-    text-align: center;
-}
-
 // Positionen zum ausblenden
 // nicht unbedingt ausblenden:
 // header,
@@ -74,7 +67,7 @@ img {
 
 /* TYPO */
 p + p {
-	text-indent: 1.6em;
+	text-indent: 0 !important;
 }
 
 p, ul li {
@@ -121,6 +114,14 @@ h6 {
 }
 
 /* JOOMLA STUFF*/
+
+footer.print-footer {
+        background: transparent;
+        color: gray;
+        padding: 1em;
+        text-align: center;
+}
+
 .blog, .item-page {
 	padding: 0;
 	margin-top: .5cm;

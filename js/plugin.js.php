@@ -249,6 +249,6 @@ $textindent = $this->params->get('textindent');
     jQuery('#responsive_headline').fitText(1.8, {
         minFontSize: '26px',
         maxFontSize: '78px'
-    })
+    });
 
 </script>

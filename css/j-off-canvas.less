@@ -38,20 +38,22 @@ aside {
 
 // für links
 .sidebar-push-toright {
-	left: 17em;
+	-webkit-transform: translateX(17em);
+	transform: translateX(17em);
 }
 
 // für rechts
 .sidebar-push-toleft {
-	left: -17em;
+	-webkit-transform: translateX(-17em);
+	transform: translateX(-17em);
 }
 
 // Transitions
-.sidebar,
-.sidebar-push {
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+.sidebar-push-toleft,
+.sidebar-push-toright,
+.sidebar-push  {
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	transition: transform 0.3s ease-out;
 }
 
 .wrapper-push, .wrapper {
@@ -180,12 +182,14 @@ aside {
 
 	// für links
 	.sidebar-push-toright {
-		left: 27em;
+		-webkit-transform: translateX(27em);
+		transform: translateX(27em);
 	}
 
 	// für rechts
 	.sidebar-push-toleft {
-		left: -27em;
+		-webkit-transform: translateX(-27em);
+		transform: translateX(-27em);
 	}
 }
 

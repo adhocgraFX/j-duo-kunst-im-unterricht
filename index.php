@@ -22,8 +22,14 @@ $logo = $this->params->get('logo');
 $logotitle = $this->params->get('logotitle');
 $textresizer = $this->params->get('textresizer');
 
-// Add Joomla! JavaScript Frameworks todo wie kann man das besser kontrollieren??
+// Add Joomla! JavaScript Frameworks
 JHtml::_('bootstrap.framework');
+
+// unset mootools
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core-uncompressed.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more-uncompressed.js']);
 
 // Add current user information
 $user = JFactory::getUser();

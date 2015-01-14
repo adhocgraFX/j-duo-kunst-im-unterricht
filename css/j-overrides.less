@@ -313,11 +313,21 @@ div.category-list {
     // kleinere Schrift, wg layout
     table {
         // font-size: .875em; // su
+
+        td.list-title  {
+            padding: 0;
+
+            a {
+                padding: .6em .5em;
+                display: block;
+                width: 100%;
+            }
+        }
     }
 
     // wegnehmen, nur in k-i-u
     fieldset.filters {
-        .visuallyhidden
+        .visuallyhidden;
     }
 }
 
@@ -356,7 +366,9 @@ div.categories-list {
 
             a {
                 display: inline-block;
-                padding: .5em 1em;
+                padding: .6em .5em;
+                // width: 80%;
+                width: 100%;
 
                 &:hover {
                     background: @gainsboro-light;
@@ -368,12 +380,15 @@ div.categories-list {
             }
 
             span.badge {
+                .visuallyhidden;
+
+                /* nur in k i u
                 background: @gainsboro;
                 color: @brand-color-darker;
                 text-shadow: 0 0 0 transparent !important;
                 padding: .5em 1em;
-                margin: .25em;
-                float: right;
+                margin: .35em 0;
+                float: right; */
             }
         }
     }

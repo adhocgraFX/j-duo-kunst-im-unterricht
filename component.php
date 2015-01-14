@@ -38,7 +38,7 @@ $doc->addStyleSheet($tpath.'/css/j-template.css');
     <jdoc:include type="component" />
 </div>
 <footer class="print-footer">
-    <p style="color:slategrey; text-align:center"><?php echo htmlspecialchars($app->getCfg('sitename')); ?> | 2014 | &copy; | alle Rechte vorbehalten</p>
+    <p><?php echo htmlspecialchars($app->getCfg('sitename')); ?> | 2014 | &copy; | alle Rechte vorbehalten</p>
 </footer>
 
 </body>
